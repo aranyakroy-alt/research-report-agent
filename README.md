@@ -1,4 +1,4 @@
-# Research & Report Agent — POC 2
+# Research & Report Agent
 
 [![GitHub](https://img.shields.io/badge/GitHub-aranyakroy--alt%2Fresearch--report--agent-181717?logo=github)](https://github.com/aranyakroy-alt/research-report-agent)
 
