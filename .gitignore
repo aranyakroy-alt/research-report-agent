@@ -1,0 +1,27 @@
+# Environment
+.env
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+dist/
+build/
+
+# Outputs & generated files
+poc2_research_agent/outputs/
+outputs/
+memory/
+
+# All markdown files EXCEPT README.md
+*.md
+!README.md
+
+# Frontend
+frontend/node_modules/
+frontend/build/
+
+# macOS
+.DS_Store

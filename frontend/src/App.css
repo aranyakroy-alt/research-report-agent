@@ -1,0 +1,114 @@
+/* ─── CSS variables ─────────────────────────────────────────── */
+:root {
+  --bg-primary:    #ffffff;
+  --bg-secondary:  #f5f5f3;
+  --bg-tertiary:   #ededea;
+  --text-primary:  #1a1a1a;
+  --text-secondary:#6b6b6b;
+  --text-tertiary: #9b9b9b;
+  --ok-bg:         #e8f5e9;
+  --ok-text:       #2e7d32;
+  --warn-bg:       #fff8e1;
+  --warn-text:     #f57f17;
+  --info-bg:       #e3f2fd;
+  --info-text:     #1565c0;
+  --danger-bg:     #ffebee;
+  --danger-text:   #c62828;
+  --border:        rgba(0,0,0,0.1);
+  --border-emphasis: rgba(0,0,0,0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary:    #1a1a1a;
+    --bg-secondary:  #242424;
+    --bg-tertiary:   #2e2e2e;
+    --text-primary:  #f0f0f0;
+    --text-secondary:#a0a0a0;
+    --text-tertiary: #6b6b6b;
+    --border:        rgba(255,255,255,0.1);
+    --border-emphasis: rgba(255,255,255,0.2);
+  }
+}
+
+/* ─── Reset ─────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* ─── Layout ─────────────────────────────────────────────────── */
+.app-root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.panels {
+  display: flex;
+  flex: 1;
+  gap: 12px;
+  padding: 12px;
+  min-height: 0;
+}
+
+.panel {
+  background: var(--bg-primary);
+  border: 0.5px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-left  { flex: 42; }
+.panel-right { flex: 58; }
+
+/* ─── Pulse animation ────────────────────────────────────────── */
+@keyframes pulse {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

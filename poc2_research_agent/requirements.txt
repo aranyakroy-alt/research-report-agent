@@ -1,0 +1,10 @@
+anthropic
+openai
+yfinance
+requests
+python-dotenv
+pytest
+ddgs
+fastapi
+uvicorn[standard]
+sse-starlette
